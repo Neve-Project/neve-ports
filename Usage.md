@@ -1,6 +1,6 @@
-# Using nports
+# Using neve-ports
 
-This document provides a comprehensive reference on using the `nports` system,
+This document provides a comprehensive reference on using the `neve-ports` system,
 more specifically its `nbuild` component.
 
 *Table of Contents*
@@ -27,7 +27,7 @@ more specifically its `nbuild` component.
 
 ## Introduction
 
-The `nports` collection comes with a specialized build system, `nbuild`. The
+The `neve-ports` collection comes with a specialized build system, `nbuild`. The
 system provides a way for people to build their own binary packages from
 special templates.
 
@@ -222,7 +222,7 @@ this:
 ./nbuild bootstrap
 ```
 
-By default, this will be `bldroot` inside your `nports` directory. If you have
+By default, this will be `bldroot` inside your `neve-ports` directory. If you have
 just done a source bootstrap, there is a chance you don't need to run this as
 the source bootstrap does it for you as the last step. You will need to do this
 if you ever need to re-create it.
@@ -435,7 +435,7 @@ only have an effect with specific commands.
 * `--bulk-continue` When doing bulk builds, do not abort the whole bulk if a
   package fails. This may result in incorrect build order.
 * `-c PATH`, `--config PATH` *(default: `etc/config.ini`)* The path to the config
-  file that `nbuild` reads configuration data from. If relative, it is to nports.
+  file that `nbuild` reads configuration data from. If relative, it is to neve-ports.
 * `-C`, `--skip-check` Never attempt to run the `check` phase.
 * `-D`, `--dirty-build` Skip installation of dependencies in the `bldroot`,
   as well as removal of automatic dependencies after successful build, and
@@ -506,7 +506,7 @@ The following commands are recognized:
   found but failed to parse), `broken` (if it's explicitly marked `broken`),
   `failed` (if it failed to build) or `ok`. The bulk expressions themselves
   may be a variety of things; if given no expressions, a full bulk build of
-  the whole `nports` is performed, otherwise the inputs may be simple template
+  the whole `neve-ports` is performed, otherwise the inputs may be simple template
   names (like for `pkg`), category names (e.g. `main`), or special expressions.
   The special expressions include `list:XXX` (a list of template names separated
   by whitespace, but given as a single string), `file:PATH` (a file containing
@@ -551,7 +551,7 @@ The following commands are recognized:
   dependency cycles. Only one cycle at a time is printed. The goal is to
   keep the tree free of cycles at all times. Therefore, if you encounter
   a cycle, resolve it and check again.
-* `dump` Dump serialized template metadata in JSON format for all of `nports`.
+* `dump` Dump serialized template metadata in JSON format for all of `neve-ports`.
 * `deps`, `fetch`, `extract`, `prepare`, `patch`, `configure`, `build`, `check`,
   `install`, `pkg` Given an argument of template path (`category/name`) this
   will invoke the build process for the given template up until the given phase.

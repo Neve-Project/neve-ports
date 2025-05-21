@@ -1,4 +1,4 @@
-# Git basics with nports
+# Git basics with neve-ports
 
 There is a chance you are unfamiliar with how Git works and it's giving you
 some trouble. This is not a replacement for a proper Git guide per se but
@@ -7,7 +7,7 @@ aims to provide some tips for basic foolproof usage.
 In general, do not use GitHub's UI for anything but creating a pull request.
 Everything else should be done on your computer using local Git tools.
 
-## Cloning nports
+## Cloning neve-ports
 
 After you have forked the repository on GitHub, you will need to clone your
 personal fork to have a local copy. To be able to push changes into it, you
@@ -17,7 +17,7 @@ on GitHub).
 Typically this will involve the following:
 
 ```
-git clone git@github.com:yourusername/nports.git
+git clone git@github.com:yourusername/neve-ports.git
 ```
 
 Git has a concept of "remotes". A remote is basically a pair of URLs (one
@@ -30,19 +30,19 @@ e.g. to avoid having to type in your SSH key passphrase every time you pull.
 You can alter that like this:
 
 ```
-git remote set-url origin https://github.com/yourusername/nports.git
-git remote set-url --push origin git@github.com:yourusername/nports.git
+git remote set-url origin https://github.com/yourusername/neve-ports.git
+git remote set-url --push origin git@github.com:yourusername/neve-ports.git
 ```
 
 The `set-url` command will alter both URLs, so you need to manually reset
 just the push URL afterwards.
 
-In any case, you will also want a remote for Neve's `nports` repository,
+In any case, you will also want a remote for Neve's `neve-ports` repository,
 which you will use to sync changes back into your fork. As you most likely
 do not have push access there anyway, let's use the HTTPS URL:
 
 ```
-git remote add upstream https://github.com/chimera-linux/nports.git
+git remote add upstream https://github.com/chimera-linux/neve-ports.git
 ```
 
 Configure your email and name for the repository as well:
@@ -69,7 +69,7 @@ such as the commit message and author name and email, identified by a specific
 hash. A Git history is a chain of commits, all the way to the first one.
 
 Git also supports branches. A branch represents a particular history. The
-`master` branch is the primary one in `nports`. You can have custom branches
+`master` branch is the primary one in `neve-ports`. You can have custom branches
 which diverge from the `master` branch in their own ways.
 
 Git histories are immutable, so changing it results in a new history starting
@@ -112,7 +112,7 @@ You can create a worktree like so:
 git worktree add additional_tree
 ```
 
-This will create a directory `additional_tree` containing the `nports`
+This will create a directory `additional_tree` containing the `neve-ports`
 structure, but separately. You can create a worktree out of an unchecked
 branch by passing that branch name afterthe directory name. By default,
 if you do not pass anything, a new branch will be created, with the same
@@ -126,7 +126,7 @@ can only have one worktree for any particular branch.
 ## Creating changes
 
 With these things out of the way, you can make whatever changes you like in
-the `nports` tree. You will then want to make them into commits, ensuring
+the `neve-ports` tree. You will then want to make them into commits, ensuring
 that those commits follow Neve's rules.
 
 To create a commit, you will need to first tell Git which changes should be

@@ -1461,7 +1461,7 @@ def ...
 
 The subpackage will only be defined if the condition argument is `True`.
 **Note that this is the only way subpackages should ever be conditional in.**
-Generally it applies that if the subpackage symlink exists in `nports`, there
+Generally it applies that if the subpackage symlink exists in `neve-ports`, there
 should always be a decorated subpackage function. The reason for this is that
 `nbuild` should be aware of any subpackage the template may generate, without
 regard to whether it will be generated or not. This is useful as it allows
@@ -2812,7 +2812,7 @@ The absolute path to the directory with `template.py`.
 ##### self.files_path
 
 The absolute path to the `files` directory of the template. This directory
-contains auxiliary files needed for the build, shipped in `nports`.
+contains auxiliary files needed for the build, shipped in `neve-ports`.
 
 ##### self.patches_path
 
@@ -3806,7 +3806,7 @@ You can call them from your custom functions.
 
 If you want to contribute, you need to take the following steps:
 
-1) Fork the `nports` repository
+1) Fork the `neve-ports` repository
 2) Read `CONTRIBUTING.md`
 3) Work on your contribution, ensuring quality requirements are met
    (if you are unsure, do not hesitate to ask for help)

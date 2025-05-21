@@ -1,6 +1,6 @@
-# Contributing to nports
+# Contributing to neve-ports
 
-While Neve is not made of only `nports`, most people will probably want
+While Neve is not made of only `neve-ports`, most people will probably want
 to contribute here.
 
 ## Getting started
